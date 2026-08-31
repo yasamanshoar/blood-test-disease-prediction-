@@ -18,3 +18,30 @@ NumPy
 Random Forest
 Machine Learning
 pyqt5
+
+Installation
+Clone the repository:
+
+git clone https://github.com/yasamanshoar/blood-test-disease-prediction.git
+cd blood-test-disease-prediction
+Install the required dependencies:
+pip install -r requirements.txt
+
+Usage
+Run the main Python file:
+
+python main.py
+The application will launch the user interface and allow the trained model to process blood test data.
+
+Project Structure
+
+blood-test-disease-prediction/
+├── README.md
+├── requirements.txt
+├── main.py
+├── train.py
+├── blood_disease_pipeline.pkl
+├── blood_test_synthetic_dataset.csv
+└── ui/
+ ├── ui
+ └── images/
