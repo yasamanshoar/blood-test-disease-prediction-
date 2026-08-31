@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>medicalai</class>
+ <widget class="QMainWindow" name="medicalai">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>779</width>
+    <height>504</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>medical-ai</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>C:/Users/Yasi/Desktop/—Pngtree—a vector blood icon_7887453.png</normaloff>C:/Users/Yasi/Desktop/—Pngtree—a vector blood icon_7887453.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#F0F5F4;</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>20</width>
+    <height>20</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="Output">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>110</y>
+      <width>531</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;B Nazanin&quot;;
+border: 1px solid #E3E3E3;
+    border-radius: 10px;
+    background-color: white;
+
+</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'B Nazanin'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Google Sans Text,Google Sans'; font-size:14px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="warning">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>761</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    border: 3px solid #fef08a t;
+    background-color:#fefce8;;
+font: 14pt &quot;B Nazanin&quot;;</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'B Nazanin'; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p dir='rtl' style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:12pt;&quot;&gt; سلب مسئولیت پزشکی: این ابزار صرفاً برای اهداف آموزشی و اطلاعاتی طراحی شده است و جایگزین مشاوره پزشکی حرفه‌ای، تشخیص یا درمان نیست. همواره برای تفسیر دقیق آزمایش‌ها با پزشک خود مشورت کنید.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="prompt02">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>390</y>
+      <width>721</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid #E3E3E3;
+    border-radius: 10px;
+    background-color: white;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="prompt">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>400</y>
+      <width>541</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font:14pt &quot;B Nazanin&quot;;
+    background-color: white;
+border: non;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="imageadd">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>400</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    /* آیکون گرد */
+   
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* گرد کردن */
+
+    
+    /* حذف متن و border */
+    color: transparent;
+    border: none;
+    
+    /* اندازه دایره */
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    
+    border:1px solid #969696;
+    border-radius: 5px;
+}
+
+QPushButton:pressed {
+  
+    background-color: rgba(46, 204, 113, 0.1);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>send-4.png</normaloff>send-4.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>36</width>
+      <height>27</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="imagesend">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>400</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>41</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>41</width>
+      <height>41</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    /* آیکون گرد */
+   
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* گرد کردن */
+    border-radius: 20px;
+    
+    /* حذف متن و border */
+    color: transparent;
+    border: none;
+    
+    /* اندازه دایره */
+    background-color: transparent;
+}
+
+QPushButton:hover {
+   
+    border:1px solid #969696;
+    border-radius: 15px;
+}
+
+QPushButton:pressed {
+   
+    background-color: rgba(46, 204, 113, 0.1);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>send-2.png</normaloff>send-2.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>34</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="trash">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>400</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    /* آیکون گرد */
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* گرد کردن */
+
+    
+    /* حذف متن و border */
+    color: transparent;
+    border: none;
+    
+    /* اندازه دایره */
+    background-color: transparent;
+}
+
+QPushButton:hover {
+   
+    border:1px solid #969696;
+    border-radius: 5px;
+}
+
+QPushButton:pressed {
+   
+    background-color: rgba(46, 204, 113, 0.1);
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>trash.1.png</normaloff>trash.1.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>39</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="key2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>320</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    font-family: 'Google Sans Text', 'Google Sans';
+    font-size: 14px;
+border: 1px solid #E3E3E3;
+    border-radius: 10px;
+    background-color: white;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="key">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>330</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    /* آیکون گرد */
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* گرد کردن */
+
+    
+    /* حذف متن و border */
+    color: transparent;
+    border: none;
+    
+    /* اندازه دایره */
+    background-color: transparent;
+}
+
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>key.01.png</normaloff>key.01.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>38</width>
+      <height>42</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="key3">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>330</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Arial&quot;;
+    background-color: white;
+border: non;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ai">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>110</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>41</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>41</width>
+      <height>41</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#48E5BB;
+ background-position: center;
+ border-radius: 20px;
+ border:1px solid #969696;
+    
+ 
+
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>ai2.png</normaloff>ai2.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>34</width>
+      <height>34</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>779</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
