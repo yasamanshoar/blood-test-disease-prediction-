@@ -45,3 +45,11 @@ blood-test-disease-prediction/
 └── ui/
  ├── ui
  └── images/
+
+User Interface
+
+The project includes a graphical user interface for interacting with the trained machine learning model.
+
+## User Interface
+
+![Application Interface](ui.png)11:26
